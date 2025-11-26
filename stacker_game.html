@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра "Строй Башню"</title>
+    <link rel="stylesheet" href="stacker_style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>🏗️ Строй Башню!</h1>
+        <p>Нажимайте ПРОБЕЛ, чтобы опустить блок.</p>
+
+        <canvas id="gameCanvas" width="400" height="600"></canvas>
+
+        <div class="score-area">
+            Ваша высота: <span id="score">0</span> блоков
+        </div>
+
+        <button id="startButton" class="game-button">Начать игру</button>
+        <button id="restartButton" class="game-button" style="display: none;">Играть снова</button>
+
+        <div id="gameOverScreen" class="game-over-screen" style="display: none;">
+            <h2>Конец игры!</h2>
+            <p>Вы построили <span id="finalScore">0</span> блоков.</p>
+            <button class="game-button" onclick="restartGame()">Начать заново</button>
+        </div>
+    </div>
+
+    <script src="stacker_script.js"></script>
+</body>
+</html>

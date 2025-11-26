@@ -1,0 +1,104 @@
+body {
+    font-family: 'Press Start 2P', cursive; /* Пиксельный шрифт, если он доступен */
+    font-family: 'Arial', sans-serif; /* Запасной шрифт */
+    background-color: #2c3e50; /* Темно-синий фон */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+    color: #ecf0f1; /* Светлый текст */
+    overflow: hidden; /* Скрыть прокрутку, если есть */
+}
+
+.game-container {
+    background-color: #34495e; /* Чуть светлее фон для контейнера */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    width: 440px; /* Ширина под Canvas */
+    position: relative;
+    overflow: hidden; /* Скрыть все, что выходит за границы контейнера */
+}
+
+h1 {
+    font-size: 32px;
+    margin-top: 10px;
+    color: #f1c40f; /* Ярко-желтый заголовок */
+    text-shadow: 2px 2px #c0392b; /* Красная тень */
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+canvas {
+    background-color: #1a1a1a; /* Цвет по умолчанию для Canvas */
+    border: 3px solid #f1c40f; /* Желтая рамка */
+    display: block; /* Убираем лишние отступы */
+    margin: 0 auto 20px auto; /* Центрируем и добавляем отступ */
+}
+
+.score-area {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #2ecc71; /* Зеленый для очков */
+    font-weight: bold;
+}
+
+.game-button {
+    background-color: #e74c3c; /* Красная кнопка */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+    box-shadow: 3px 3px #c0392b;
+}
+
+.game-button:hover {
+    background-color: #c0392b;
+    box-shadow: 1px 1px #8e44ad;
+}
+
+.game-over-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(44, 62, 80, 0.95); /* Полупрозрачный фон */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* Поверх всего */
+    border-radius: 10px; /* Совпадает с контейнером */
+}
+
+.game-over-screen h2 {
+    color: #e74c3c; /* Красный для "Конец игры!" */
+    font-size: 40px;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px #c0392b;
+}
+
+.game-over-screen p {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #f1c40f;
+}
+
+.game-over-screen button {
+    background-color: #2ecc71; /* Зеленая кнопка "Начать заново" */
+    box-shadow: 3px 3px #27ae60;
+}
+
+.game-over-screen button:hover {
+    background-color: #27ae60;
+    box-shadow: 1px 1px #16a085;
+}
